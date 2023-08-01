@@ -18,12 +18,15 @@ High-res laptop or desktop: 1920 x 1080
     --cor4-transparent: #062e5cbc;
 }
 
+/* TABLET */
+
 @media screen and (min-width: 768px) and (max-width: 1024px) {
     body {
-        background-image: linear-gradient(to bottom, #106FDB, #0C55A8);
+        background-image: linear-gradient(to bottom, #5396E1, #0C55A8);
     }
     #login {
-        width: 80vw
+        width: 80vw;
+        height: 300px;
     }
 
     .image-login {
@@ -37,25 +40,47 @@ High-res laptop or desktop: 1920 x 1080
         width: 70%;
         height: 100%;
     }
+
+    .form-login h1 {
+        font-size: 1.5em;
+    }
+
+    .form-login p {
+        font-size: 1em;
+        margin: 10px 0px;
+    }
 }
+
+/* DESKTOP */
 
 @media screen and (min-width: 1024px) {
     body {
-        background-image: linear-gradient(to bottom, #106FDB, #0C55A8);
+        background-image: linear-gradient(to bottom, #5396E1, #0C55A8);
     }
-    
+
     #login {
         width: 990px;
+        height: 350px;
     }
 
     .image-login {
-        float: left;
+        float: right;
         width: 50%;
         height: 100%;
     }
     
     .form-login {
-        float: right;
+        float: left;
         width: 50%;
+    }
+
+    .form-login h1 {
+        font-size: 2em;
+    }
+
+    .form-login p {
+        font-size: 1.1em;
+        margin: 10px 0px;
+
     }
 }

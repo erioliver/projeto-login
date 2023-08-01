@@ -9,6 +9,7 @@
     --cor3: #223D5C;
     --cor4: #062E5C;
     --cor4-transparent: #062e5cbc;
+    --cor5: #c2deff;
 }
 
 * {
@@ -34,15 +35,16 @@ main {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
     overflow: hidden;
     background-color: white;
     width: 250px;
-    height: 500px;
+    height: 515px;
     border-radius: 20px;
     box-shadow: 0px 0px 10px var(--cor4-transparent);
+
     transition: width 0.3s, height 0.3s;
     transition-timing-function: ease;
+    transform: translate(-50%, -50%); /* sempre que tiver transform coloca como ultima config */
 }
 
 .image-login {
@@ -56,4 +58,97 @@ main {
 .form-login {
     display: block;
     padding: 10px;
+}
+
+.form-login h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.form-login p {
+    font-size: 0.8em;
+}
+
+.campo {
+    background-color: var(--cor2);
+    border: 2px soli var(--cor2);
+    display: block;
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+    margin: 5px 0px;
+}
+
+.campo > label {
+    display: none;
+}
+
+.campo > span {
+    color: white;
+    font-size: 2em;
+    width: 40px;
+    padding: 4px;
+}
+
+.campo > input {
+    background-color: var(--cor0);
+    font-size: 1em;
+    width: calc(100% - 47.5px);
+    height: 90%;
+    border: 0px;
+    border-radius: 8px;
+    padding: 4px;
+    outline: none;
+
+    transform: translateY(-9.5px); /* sempre que tiver transform coloca como ultima config */
+}
+
+form > div > input[type=submit] {
+    display: block;
+    font-size: 1em;
+    width: 100%;
+    height: 40px;
+    background-color: var(--cor1);
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+input::placeholder {
+    color: white;
+  }
+
+.campo > input:focus-within {
+    background-color: white;
+    color: var(--cor1);
+}
+
+form > div > input[type=submit]:hover {
+    background-color: var(--cor3);
+}
+
+.bottom {
+    display: block;
+    text-align: center;
+    font-size: 1em;
+    width: 100%;
+    height: 40px;
+    padding-top: 5px;
+    margin-top: 5px;
+    background-color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    color: var(--cor1);
+    border: 1px solid var(--cor1);
+    
+}
+
+.bottom:hover {
+    background-color: var(--cor1);
+    color: white;
+    cursor: pointer;
+}
+
+.bottom > span {
+    font-size: 0.8em;
 }
